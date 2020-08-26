@@ -93,7 +93,7 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
 
 }
   int max(int c,int d){
-    if ( (c>d) || (c=d) )
+    if (c>d)
       {
 	return c;
       }
