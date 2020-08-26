@@ -50,17 +50,17 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
      for(int x=0;x<=w;x++){
      //count from 0 to w. Call the number you count with x
        if(  (((x>=x_offset) && (x<xo)) &&
-	  ((y=y_offset)||(y=yo - 1)))
+	  ((y==y_offset)||(y==yo - 1)))
 
 	    ||
 	   
-	    (((y>=y_offset)&& (y<yo)) &&
-	  ((x=x_offset) || (x=xo - 1)))  )
+	    (((y>=y_offset) && (y<yo)) &&
+	  ((x==x_offset) || (x==xo - 1)))  )
 	 {
 	   printf("*");
 	 }
-       else if (  ((x<size1) && ((y=0) || (y=size1 - 1)))
-		  || ((y<size1) && ((x=0) || (x=size1 - 1))) )
+       else if (  ((x<size1) && ((y==0) || (y==size1 - 1)))
+		  || ((y<size1) && ((x==0) || (x==size1 - 1))) )
 		  { 
 
       //check if  EITHER
@@ -81,17 +81,19 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
  		    printf("#"); 
       //else print a space
 		  }
-		    else
+	    else
 		      printf(" ");
-		  }
      }
+    
     //when you finish counting x from 0 to w, 
     //print a newline
-	   printf("\n");
+
+     printf("\n");
    }
 
+}
   int max(int c,int d){
-    if(c>d)
+    if ( (c>d) || (c=d) )
       {
 	return c;
       }
