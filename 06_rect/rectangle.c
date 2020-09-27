@@ -37,9 +37,8 @@ rectangle canonicalize(rectangle r) {
 
 rectangle intersection(rectangle r1, rectangle r2) {
 //WRITE THIS FUNCTION
-
-  rectangle r3;
-  rectangle r4;
+rectangle r3;
+ rectangle r4;
   r4.width = 0;
   r4.height = 0;
   r1 = canonicalize(r1);
